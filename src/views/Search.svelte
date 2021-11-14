@@ -2,7 +2,8 @@
   export let searchTerm = ''
   import NewsList from '../components/NewsList.svelte'
   import { drawerOpen } from '../stores'
-  
+  import { showError } from '../lib'
+
   let news = []
   let loading = false
 
@@ -24,6 +25,7 @@
       .catch(err => {
         loading = false
         console.log(err)
+        showError('Takapäähän ei saatu yhteyttä :(')
       })
   }
 

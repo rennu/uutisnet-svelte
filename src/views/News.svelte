@@ -1,4 +1,5 @@
 <script>
+  import { showError } from '../lib'
   import NewsList from '../components/NewsList.svelte'
 
   let news = []
@@ -13,6 +14,7 @@
     .catch(err => {
       loading = false
       console.log(err)
+      showError('Takapäähän ei saatu yhteyttä :(')
     })
 </script>
 

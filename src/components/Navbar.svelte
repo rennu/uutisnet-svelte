@@ -36,25 +36,25 @@
   }
 
   .left {
-    padding-left: 10px;
+    padding-left: 15px;
   }
 
   .right {
-    padding-right: 10px;
+    padding-right: 15px;
   }
 
   .right {
     flex: 1;
   }
   .menu-button {
+    cursor: pointer;
     float: right;
-    padding-top: 5px;
+    padding-top: 8px;
   }
   .menu-button > div {
-    width: 35px;
-    height: 5px;
-    background-color: #222222;
+    width: 30px;
+    height: 3px;
+    background-color: #444444;
     margin: 6px 0;
   }
-
 </style>

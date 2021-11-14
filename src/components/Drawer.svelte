@@ -1,7 +1,6 @@
 <script>
-  import { sources, drawerOpen } from '../stores'
-
   import { navigate, Link } from 'svelte-navigator'
+  import { sources, drawerOpen } from '../stores'
 
   let searchTerm = ''
   let newsSources
@@ -20,7 +19,6 @@
 
   let open = false
   drawerOpen.subscribe(value => open = value)
-
 </script>
 
 <div class='drawer' style={`${open ? 'right: 0px' : ''}`}>

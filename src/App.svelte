@@ -9,8 +9,7 @@
 
   import Drawer from './components/Drawer.svelte'
   import Navbar from './components/Navbar.svelte'
-
-  let drawerOpen = false
+  import Error from './components/Error.svelte'
 
   // Load sources
   fetch('/api/sources')
@@ -21,22 +20,17 @@
     .catch(err => {
       console.log(err)
     })
-  
-  $: {
-    console.log(drawerOpen)
-  }
 </script>
 
 <main class='container is-max-desktop'>
   <Router>
-    <Drawer open={drawerOpen} />
-    <Navbar bind:drawerOpen={drawerOpen} />
-    <Route path='/'>
-      <NewsView />
-    </Route>
+    <Drawer />
+    <Navbar />
+    <Route path='/' component={NewsView} />
     <Route path='/haku/:searchTerm' component={SearchView} />
     <Route path='/lehti/:source' component={SourceView} />
   </Router>
+  <Error />
 </main>
 
 <style>

@@ -1,5 +1,6 @@
 <script>
   import { sources } from '../stores'
+  import { showError } from '../lib'
   import NewsList from '../components/NewsList.svelte'
 
   export let source = ''
@@ -25,6 +26,7 @@
           })
           .catch(err => {
             loading = false
+            showError('Takapäähän ei saatu yhteyttä :(')
             console.log(err)
           })
       }
