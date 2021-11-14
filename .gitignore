@@ -1,7 +1,8 @@
 /node_modules/
-/public/build/*.html
-/public/build/*.js
-/public/build/*.map
+public/build/*.html
+public/build/*.js
+public/build/*.map
+public/build/*.css
 
 .DS_Store
 

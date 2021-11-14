@@ -1,5 +1,6 @@
 <script>
   import { drawerOpen } from '../stores'
+  import { Link } from 'svelte-navigator'
 
   const toggleDrawer = () => drawerOpen.update(value => !value)
 
@@ -7,14 +8,14 @@
 
 <div class='navbar'>
   <div class='left'>
-    <h2 class='title'>Uutisnet</h2>
-  </div>
-  <div class='right'>
     <div class='menu-button' on:click={toggleDrawer}>
       <div />
       <div />
       <div />
     </div>
+  </div>
+  <div class='right'>
+    <h2 class='title'><Link to='/' style='color: #222222'>Uutisnet</Link></h2>
   </div>
 </div>
 
@@ -36,20 +37,19 @@
   }
 
   .left {
-    padding-left: 15px;
+    padding-left: 20px;
   }
 
   .right {
+    padding-left: 20px;
     padding-right: 15px;
-  }
-
-  .right {
     flex: 1;
   }
+
   .menu-button {
     cursor: pointer;
     float: right;
-    padding-top: 8px;
+    padding-top: 10px;
   }
   .menu-button > div {
     width: 30px;
