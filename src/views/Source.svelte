@@ -1,6 +1,6 @@
 <script>
   import { sources } from '../stores'
-  import { showError } from '../lib'
+  import { showError } from '../actions'
   import NewsList from '../components/NewsList.svelte'
 
   export let source = ''

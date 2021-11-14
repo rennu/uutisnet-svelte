@@ -2,7 +2,7 @@
   export let searchTerm = ''
   import NewsList from '../components/NewsList.svelte'
   import { drawerOpen } from '../stores'
-  import { showError } from '../lib'
+  import { showError } from '../actions'
 
   let news = []
   let loading = false

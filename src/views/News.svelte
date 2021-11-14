@@ -1,5 +1,5 @@
 <script>
-  import { showError } from '../lib'
+  import { showError } from '../actions'
   import NewsList from '../components/NewsList.svelte'
 
   let news = []
