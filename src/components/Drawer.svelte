@@ -42,6 +42,7 @@
     </ul>
   </div>
 </div>
+<div class='overlay' style={`${open ? 'display: block' : '' }`} on:click={hideDrawer} />
 
 <style>
   .drawer {
@@ -58,5 +59,14 @@
     left: -260px;
     margin-top: 50px;
     transition-duration: 250ms;
+  }
+  .overlay {
+    z-index: 8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
   }
 </style>
