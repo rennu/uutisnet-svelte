@@ -72,6 +72,7 @@ export default {
 		production && terser(),
 
     dev({
+      spa: true,
       dirs: ['public'],
       host: 'localhost',
       port: 5000,
