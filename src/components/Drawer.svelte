@@ -59,6 +59,8 @@
     left: -260px;
     margin-top: 50px;
     transition-duration: 250ms;
+
+    overflow-y: auto;
   }
   .overlay {
     z-index: 8;
